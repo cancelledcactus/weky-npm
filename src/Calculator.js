@@ -310,10 +310,7 @@ module.exports = async (options) => {
 		.setTitle(options.embed.title)
 		.setDescription(stringify)
 		.setColor(options.embed.color)
-		.setFooter('calcing');
-	if (options.embed.timestamp) {
-		embed.setTimestamp();
-	}
+		
 	options.message.inlineReply(embed).then(async (msg) => {
 		msg.edit({
 			embed: embed,
@@ -345,10 +342,7 @@ module.exports = async (options) => {
 				.setTitle(options.embed.title)
 				.setDescription(stringify)
 				.setColor(options.embed.color)
-				.setFooter('calcing');
-			if (options.embed.timestamp) {
-				_embed.setTimestamp();
-			}
+				
 			msg.edit({
 				embed: _embed,
 				components: [
@@ -380,10 +374,7 @@ module.exports = async (options) => {
 				.setTitle(options.embed.title)
 				.setColor(options.embed.color)
 				.setDescription(stringify)
-				.setFooter('Calcing');
-			if (options.embed.timestamp) {
-				_embed.setTimestamp();
-			}
+				
 			msg.edit({
 				embed: _embed,
 				components: [
